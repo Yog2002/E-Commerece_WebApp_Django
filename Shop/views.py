@@ -8,7 +8,7 @@ def index(request):
     return render(request,"Shop/index.html")
 
 def about(request):
-    return HttpResponse("We Are At AboutUs")
+    return render(request,'Shop/aboutus.html')
 
 def contact(request):
     return HttpResponse("We Are At ContactUs")
@@ -20,7 +20,7 @@ def search(request):
     return HttpResponse("We Are At Search")
 
 def proudView(request):
-   return HttpResponse("We Are At ProductView")
+    return HttpResponse("We Are At ProductView")
 
 def checkout(request):
     return HttpResponse("We Are At Checkout")
