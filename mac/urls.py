@@ -15,9 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from django.conf import settings                    #Added Maunallly
+from django.conf.urls.static import static          #Added Maunallly
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('shop/', include('Shop.urls')),
     path('blog/', include('Blog.urls'))
-]
+
+] + static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
