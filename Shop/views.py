@@ -11,7 +11,7 @@ def about(request):
     return render(request,'Shop/aboutus.html')
 
 def contact(request):
-    return HttpResponse("We Are At ContactUs")
+    return render(request,'Shop/contact.html')
 
 def tracker(request):
     return HttpResponse("We Are At Tracker")
